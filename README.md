@@ -1,1 +1,1 @@
-# sadok-veselka
+Private kindergarten. Site pages: home (brief information about the kindergarten, advantages), about us (more detailed information about the institution), staff, contact information (contacts for communication, map with location) 
