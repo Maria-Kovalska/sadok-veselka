@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Наш персонал — вихователі, методисти та психологи приватного дитячого садка Веселка.">
+    <title>Садок Веселка — Персонал</title>
+    <link href="style/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/bear.png">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <nav>
+        <div class="logo">
+            <img class="logo-icon" src="img/bear.png" alt="Логотип Садок Веселка">
+            <span class="logo-text">Садок Веселка</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Про нас</a>
+            <a href="index.html#perevagy">Переваги</a>
+            <a href="personal.html" class="active">Персонал</a>
+            <a href="contacty.html">Контакти</a>
+        </div>
+    </nav>
+
+    <main class="flex-grow-1 page-bg">
+        <div class="container py-5">
+            <div class="staff-header">
+                <img class="cloud-decor" src="img/cloud.png" alt="">
+                <h1 class="section-title" style="margin-bottom:0;">Наш Персонал</h1>
+                <img class="cloud-decor" src="img/cloud.png" alt="">
+            </div>
+
+            
+            <div class="staff-page" id="page-1">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="staff-card">
+                            <img class="staff-card-bg" src="img/avatar1.png" alt="">
+                            <div class="staff-info">
+                                <h2>Марія</h2>
+                                <p>Директор</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="staff-card">
+                            <img class="staff-card-bg" src="img/avatar2.png" alt="">
+                            <div class="staff-info">
+                                <h2>Тетяна</h2>
+                                <p>Вихователь</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="staff-card">
+                            <img class="staff-card-bg" src="img/avatar1.png" alt="">
+                            <div class="staff-info">
+                                <h2>Ірина</h2>
+                                <p>Логопед</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="staff-page d-none" id="page-2">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="staff-card">
+                            <img class="staff-card-bg" src="img/avatar2.png" alt="">
+                            <div class="staff-info">
+                                <h2>Вікторія</h2>
+                                <p>Вихователь</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="staff-card">
+                            <img class="staff-card-bg" src="img/avatar2.png" alt="">
+                            <div class="staff-info">
+                                <h2>Олена</h2>
+                                <p>Методист</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="staff-card">
+                            <img class="staff-card-bg" src="img/avatar1.png" alt="">
+                            <div class="staff-info">
+                                <h2>Анна</h2>
+                                <p>Психолог</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="staff-page d-none" id="page-3">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="staff-card">
+                            <img class="staff-card-bg" src="img/avatar1.png" alt="">
+                            <div class="staff-info">
+                                <h2>Наталія</h2>
+                                <p>Музичний керівник</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="staff-card">
+                            <img class="staff-card-bg" src="img/avatar2.png" alt="">
+                            <div class="staff-info">
+                                <h2>Юлія</h2>
+                                <p>Інструктор</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="staff-card">
+                            <img class="staff-card-bg" src="img/avatar2.png" alt="">
+                            <div class="staff-info">
+                                <h2>Софія</h2>
+                                <p>Англійська</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="pagination-container">
+                <button class="page-btn" data-page="1">1</button>
+                <button class="page-btn active" data-page="2">2</button>
+                <button class="page-btn" data-page="3">3</button>
+                <button class="page-btn page-next" id="next-btn">→</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo">
+                <img class="logo-icon" src="img/bear.png" alt="">
+                <span class="logo-text">Садок Веселка, 2026</span>
+            </div>
+            <div class="footer-links">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">Telegram</a>
+            </div>
+            <a class="connection" href="contacty.html">Зв'язатися</a>
+        </div>
+    </footer>
+
+    <script src="style/bootstrap.bundle.min.js"></script>
+    <script>
+        const pageButtons = document.querySelectorAll('.page-btn[data-page]');
+        const pages = document.querySelectorAll('.staff-page');
+        const nextBtn = document.getElementById('next-btn');
+        let currentPage = 2;
+        showPage(currentPage);
+
+        function showPage(num) {
+            pages.forEach(p => p.classList.add('d-none'));
+            document.getElementById('page-' + num).classList.remove('d-none');
+            pageButtons.forEach(b => b.classList.remove('active'));
+            document.querySelector('.page-btn[data-page="' + num + '"]').classList.add('active');
+            currentPage = num;
+        }
+
+        pageButtons.forEach(btn => {
+            btn.addEventListener('click', () => showPage(parseInt(btn.dataset.page)));
+        });
+
+        nextBtn.addEventListener('click', () => {
+            const next = currentPage < 3 ? currentPage + 1 : 1;
+            showPage(next);
+        });
+    </script>
+</body>
+</html>
