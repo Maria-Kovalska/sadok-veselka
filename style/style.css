@@ -55,11 +55,11 @@ nav {
 }
 
 .nav-toggle {
-    display: none;
+    display: none !important;
 }
 
 .nav-links {
-    display: flex;
+    display: flex !important;
 }
 
 .nav-links a {
@@ -534,7 +534,7 @@ footer {
     }
 
     .nav-toggle {
-        display: flex;
+        display: flex !important;
         background: none;
         border: none;
         cursor: pointer;
@@ -556,7 +556,7 @@ footer {
     }
 
     .nav-links {
-        display: none;
+        display: none !important;
         flex-direction: column;
         width: 100%;
         padding: 12px 0 4px;
@@ -564,7 +564,7 @@ footer {
     }
 
     .nav-links.open {
-        display: flex;
+        display: flex !important;
     }
 
     .nav-links a {
