@@ -16,7 +16,6 @@ html, body {
 }
 
 body {
-    
     background: linear-gradient(180deg, #F9B1F3 0%, #FBC4F5 35%, #FDDFF9 70%, #FFFFFF 100%);
     background-attachment: fixed;
     min-height: 100vh;
@@ -32,7 +31,6 @@ img {
     display: block;
     max-width: 100%;
 }
-
 
 nav {
     display: flex;
@@ -56,6 +54,14 @@ nav {
     object-fit: contain;
 }
 
+.nav-toggle {
+    display: none;
+}
+
+.nav-links {
+    display: flex;
+}
+
 .nav-links a {
     margin-left: 28px;
     color: var(--text-dark);
@@ -71,7 +77,6 @@ nav {
     border-color: var(--purple-mid);
     color: var(--purple-mid);
 }
-
 
 .hero-section {
     padding: 40px 0 60px;
@@ -115,7 +120,6 @@ nav {
     color: #fff;
 }
 
-
 .hero-illustration {
     position: relative;
     min-height: 360px;
@@ -125,7 +129,6 @@ nav {
     position: absolute;
     pointer-events: none;
 }
-
 
 .hero-cloud.c1 { top: 10px;   left: 0%;    width: 170px; }
 .hero-cloud.c2 { top: 40px;   left: 22%;   width: 200px; }
@@ -141,7 +144,6 @@ nav {
     width: 320px;
     z-index: 2;
 }
-
 
 .advantages-section {
     padding: 40px 20px 80px;
@@ -190,11 +192,9 @@ nav {
     font-size: 14px;
 }
 
-
 .page-bg {
     padding: 20px 0 60px;
 }
-
 
 .staff-header {
     position: relative;
@@ -258,7 +258,6 @@ nav {
     font-size: 15px;
 }
 
-
 .pagination-container {
     display: flex;
     justify-content: center;
@@ -288,7 +287,6 @@ nav {
     color: #fff;
     border-color: #000;
 }
-
 
 .contact-title {
     font-size: 26px;
@@ -427,7 +425,6 @@ nav {
     background: #333;
 }
 
-
 footer {
     padding: 24px 60px;
     margin-top: auto;
@@ -469,7 +466,6 @@ footer {
     background: var(--text-dark);
     color: #fff;
 }
-
 
 @media (max-width: 991px) {
     nav {
@@ -528,7 +524,6 @@ footer {
 }
 
 @media (max-width: 575px) {
-
     nav {
         flex-direction: row;
         justify-content: space-between;
@@ -580,7 +575,9 @@ footer {
         min-height: 48px;
     }
 
-    .nav-links a:last-child { border-bottom: none; }
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
 
     .hero-section { padding: 20px 0 40px; }
     .hero-text h1 { font-size: 22px; }
