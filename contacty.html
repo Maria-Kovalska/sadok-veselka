@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">  
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +16,10 @@
             <img class="logo-icon" src="img/bear.png" alt="Логотип Садок Веселка">
             <span class="logo-text">Садок Веселка</span>
         </div>
-        <div class="nav-links">
+        <button class="nav-toggle" id="navToggle" aria-label="Відкрити меню">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="navLinks">
             <a href="index.html">Про нас</a>
             <a href="index.html#perevagy">Переваги</a>
             <a href="personal.html">Персонал</a>
@@ -34,14 +37,13 @@
 
                         <div class="contact-item">
                             <div class="contact-icon">
-                                
                                 <svg viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <path d="M19.23 15.26l-2.54-.29a1.99 1.99 0 0 0-1.64.57l-1.84 1.84a15.05 15.05 0 0 1-6.59-6.59l1.85-1.85c.43-.43.64-1.03.57-1.64l-.29-2.52a2.001 2.001 0 0 0-1.99-1.77H5.03c-1.13 0-2.07.94-2 2.07.53 8.54 7.36 15.36 15.89 15.89 1.13.07 2.07-.87 2.07-2v-1.73c.01-1.01-.76-1.86-1.76-1.98z"/>
                                 </svg>
                             </div>
                             <div>
                                 <h2>Телефон</h2>
-                                <p>+380 (00) 000 00 00</p>
+                                <p><a href="tel:+380000000000">+380 (00) 000 00 00</a></p>
                             </div>
                         </div>
 
@@ -83,15 +85,15 @@
                         <form id="contactForm" action="#" method="GET">
                             <div class="form-group">
                                 <label for="name">Ваше ім'я</label>
-                                <input type="text" id="name" name="name" placeholder="Наприклад, Марія" required>
+                                <input type="text" id="name" name="name" placeholder="Наприклад, Марія" autocomplete="given-name" required>
                             </div>
                             <div class="form-group">
                                 <label for="contact">Ваш email або телефон</label>
-                                <input type="text" id="contact" name="contact" placeholder="+380 00 000 00 00" required>
+                                <input type="text" id="contact" name="contact" placeholder="+380 00 000 00 00" autocomplete="email" required>
                             </div>
                             <div class="form-group">
                                 <label for="message">Повідомлення</label>
-                                <textarea id="message" name="message" rows="4" placeholder="Питання, ваші побажання" required></textarea>
+                                <textarea id="message" name="message" rows="4" placeholder="Питання, ваші побажання..." required></textarea>
                             </div>
                             <button type="submit" class="btn-submit">Відправити →</button>
                         </form>
@@ -118,6 +120,13 @@
     </footer>
 
     <script src="style/bootstrap.bundle.min.js"></script>
+    <script>
+        const toggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        toggle.addEventListener('click', function() {
+            navLinks.classList.toggle('open');
+        });
+    </script>
     <script>
         const contactForm = document.getElementById('contactForm');
         contactForm.addEventListener('submit', function(event) {
