@@ -16,7 +16,10 @@
             <img class="logo-icon" src="img/bear.png" alt="Логотип Садок Веселка">
             <span class="logo-text">Садок Веселка</span>
         </div>
-        <div class="nav-links">
+        <button class="nav-toggle" id="navToggle" aria-label="Відкрити меню">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="navLinks">
             <a href="index.html">Про нас</a>
             <a href="index.html#perevagy">Переваги</a>
             <a href="personal.html" class="active">Персонал</a>
@@ -32,67 +35,47 @@
                 <img class="cloud-decor" src="img/cloud.png" alt="">
             </div>
 
-            
             <div class="staff-page" id="page-1">
                 <div class="row g-4 justify-content-center">
                     <div class="col-12 col-md-6 col-lg-4">
                         <div class="staff-card">
                             <img class="staff-card-bg" src="img/avatar1.png" alt="">
-                            <div class="staff-info">
-                                <h2>Марія</h2>
-                                <p>Директор</p>
-                            </div>
+                            <div class="staff-info"><h2>Марія</h2><p>Директор</p></div>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-4">
                         <div class="staff-card">
                             <img class="staff-card-bg" src="img/avatar2.png" alt="">
-                            <div class="staff-info">
-                                <h2>Тетяна</h2>
-                                <p>Вихователь</p>
-                            </div>
+                            <div class="staff-info"><h2>Тетяна</h2><p>Вихователь</p></div>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-4">
                         <div class="staff-card">
                             <img class="staff-card-bg" src="img/avatar1.png" alt="">
-                            <div class="staff-info">
-                                <h2>Ірина</h2>
-                                <p>Логопед</p>
-                            </div>
+                            <div class="staff-info"><h2>Ірина</h2><p>Логопед</p></div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            
             <div class="staff-page d-none" id="page-2">
                 <div class="row g-4 justify-content-center">
                     <div class="col-12 col-md-6 col-lg-4">
                         <div class="staff-card">
                             <img class="staff-card-bg" src="img/avatar2.png" alt="">
-                            <div class="staff-info">
-                                <h2>Вікторія</h2>
-                                <p>Вихователь</p>
-                            </div>
+                            <div class="staff-info"><h2>Вікторія</h2><p>Вихователь</p></div>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-4">
                         <div class="staff-card">
                             <img class="staff-card-bg" src="img/avatar2.png" alt="">
-                            <div class="staff-info">
-                                <h2>Олена</h2>
-                                <p>Методист</p>
-                            </div>
+                            <div class="staff-info"><h2>Олена</h2><p>Методист</p></div>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-4">
                         <div class="staff-card">
                             <img class="staff-card-bg" src="img/avatar1.png" alt="">
-                            <div class="staff-info">
-                                <h2>Анна</h2>
-                                <p>Психолог</p>
-                            </div>
+                            <div class="staff-info"><h2>Анна</h2><p>Психолог</p></div>
                         </div>
                     </div>
                 </div>
@@ -103,37 +86,27 @@
                     <div class="col-12 col-md-6 col-lg-4">
                         <div class="staff-card">
                             <img class="staff-card-bg" src="img/avatar1.png" alt="">
-                            <div class="staff-info">
-                                <h2>Наталія</h2>
-                                <p>Музичний керівник</p>
-                            </div>
+                            <div class="staff-info"><h2>Наталія</h2><p>Музичний керівник</p></div>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-4">
                         <div class="staff-card">
                             <img class="staff-card-bg" src="img/avatar2.png" alt="">
-                            <div class="staff-info">
-                                <h2>Юлія</h2>
-                                <p>Інструктор</p>
-                            </div>
+                            <div class="staff-info"><h2>Юлія</h2><p>Інструктор</p></div>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-4">
                         <div class="staff-card">
                             <img class="staff-card-bg" src="img/avatar2.png" alt="">
-                            <div class="staff-info">
-                                <h2>Софія</h2>
-                                <p>Англійська</p>
-                            </div>
+                            <div class="staff-info"><h2>Софія</h2><p>Англійська</p></div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            
             <div class="pagination-container">
-                <button class="page-btn" data-page="1">1</button>
-                <button class="page-btn active" data-page="2">2</button>
+                <button class="page-btn active" data-page="1">1</button>
+                <button class="page-btn" data-page="2">2</button>
                 <button class="page-btn" data-page="3">3</button>
                 <button class="page-btn page-next" id="next-btn">→</button>
             </div>
@@ -157,10 +130,15 @@
 
     <script src="style/bootstrap.bundle.min.js"></script>
     <script>
+        const toggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        toggle.addEventListener('click', function() {
+            navLinks.classList.toggle('open');
+        });
         const pageButtons = document.querySelectorAll('.page-btn[data-page]');
         const pages = document.querySelectorAll('.staff-page');
         const nextBtn = document.getElementById('next-btn');
-        let currentPage = 1;
+        let currentPage = 1; 
         showPage(currentPage);
 
         function showPage(num) {
